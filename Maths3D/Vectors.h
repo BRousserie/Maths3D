@@ -4,14 +4,20 @@
 #define d 3 // d for dimension
 #define vec array<double, d>
 
-array<vec, d> orthogonalize(array<vec, d> vectorsSet);
+array<vec, d> orthogonalize(const array<vec, d>& vectorsSet);
 
-vec projection(vec P, vec Q);
+vec projection(const vec& P, const vec& Q);
 
-double dotProduct(vec P, vec Q);
+vec perpendicularComp(const vec& P, const vec& Q);
 
-double norm(vec P);
+double dotProduct(const vec& P, const vec& Q);
+
+double norm(const vec& P);
 
 void testOrthogonalize();
 
-void printVec(vec P);
+void printVec(const vec& P);
+
+double triangleArea(const vec& A, const vec& B, const vec& C);
+
+void testTriangleArea();
